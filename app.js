@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 const nodemailer = require('nodemailer');
+var port = process.env.PORT || 3000;
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
@@ -39,4 +40,4 @@ app.get('/contact', function(req, res){
 
 
 
-app.listen(3000, () => console.log("Server started..."));
+app.listen(port);
